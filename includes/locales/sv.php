@@ -1,0 +1,62 @@
+<?php
+
+return [
+    'site.name' => 'Özgür Önder',
+    'meta.description' => 'Özgür Önder – senior teamledare samt specialist inom rapportering och workforce planning. Expert på Power BI, Excel och operativ ledning.',
+    'nav.home' => 'Hem',
+    'nav.about' => 'Om mig',
+    'nav.skills' => 'Kompetenser',
+    'nav.career' => 'Karriär',
+    'nav.reports' => 'Mock-data PBI',
+    'nav.contact' => 'Kontakt',
+
+    'section.career' => 'Karriärresa',
+    'section.reports' => 'Mock-data & Power BI',
+    'section.reports.subtitle' => '',
+    'section.reports.loading' => 'Laddar rapport…',
+    'section.reports.placeholder' => 'Denna rapport är under uppbyggnad. Den kommer att läggas till inom kort.',
+    'section.reports.lang_notice' => 'Obs: Det interaktiva instrumentpanelens gränssnitt och data är byggda på turkiska.',
+    'section.reports.open' => 'Öppna i ny flik',
+    'section.contact' => 'Kontakt',
+
+    'report.tab1.title' => 'HR-analys',
+    'report.tab2.title' => 'Försäljningsanalys',
+    'report.tab3.title' => 'Callcenter',
+
+    'hero.tag' => 'Senior teamledare • Rapportering & workforce planning',
+    'hero.title_html' => 'Lär känna <span class="highlight">teamet</span>, följ <span class="highlight">mätetal</span>, styr <span class="highlight">driften</span>',
+    'hero.subtitle' => 'Jag gör verksamheten mätbar och leder team med data. Jag bygger analyslösningar som stärker beslutsfattande och skapar långsiktig effektivitet.',
+    'hero.quote_html' => 'För mi är <strong>ett beslut utan data bara ett antagande.</strong>',
+    'hero.cta' => 'Kontakta mig',
+
+    'modal.success.title' => 'Meddelandet skickat!',
+    'modal.error.title' => 'Något gick fel',
+    'modal.ok' => 'OK',
+
+    'about.title_html' => 'Hej, jag heter <span>Özgür</span>',
+    'about.intro_html' => 'Jag arbetar med ett ständigt förbättringsfokus. För att utveckla team och operativ prestanda skapar jag <strong>datadrivna</strong>, transparenta och innovativa lösningar.',
+    'about.body' => 'Mitt mål är att skapa en tillitsfull, utvecklingsinriktad och värdeskapande arbetsmiljö. Genom att integrera modern teknik och ett analytiskt mindset i processer stödjer jag både individ- och teamframgång.',
+    'about.highlight1' => 'Datadrivna beslut',
+    'about.highlight2' => 'Teamledning & coaching',
+    'about.highlight3' => 'Processoptimering',
+
+    'skills.core.title' => 'Kärnkompetenser',
+    'skills.core.item1.title' => 'Teamledning & coaching',
+    'skills.core.item1.desc' => 'Teammotivation, performance management och individuell utveckling',
+    'skills.core.item2.title' => 'Datadrivna beslut',
+    'skills.core.item2.desc' => 'Analytiskt tänkande, KPI-uppföljning och strategiutveckling',
+    'skills.core.item3.title' => 'Processoptimering',
+    'skills.core.item3.desc' => 'Förbättring av arbetsflöden, automatisering och effektivitet',
+    'skills.core.item4.title' => 'Rapportering & planering',
+    'skills.core.item4.desc' => 'Dashboarddesign och performance-rapportering',
+    'skills.tools.title' => 'Verktyg jag använder',
+
+    'footer.copyright' => '© {year} Özgür Önder. Alla rättigheter förbehållna.',
+    'contact.name' => 'Namn',
+    'contact.email' => 'E-post',
+    'contact.subject' => 'Ämne',
+    'contact.message' => 'Ditt meddelande',
+    'contact.send' => 'Skicka meddelande',
+    'form.success' => 'Ditt meddelande har skickats. Jag återkommer så snart som möjligt.',
+    'form.error' => 'Ditt meddelande kunde inte skickas. Försök igen senare.',
+];

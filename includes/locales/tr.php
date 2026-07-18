@@ -1,0 +1,62 @@
+<?php
+
+return [
+    'site.name' => 'Özgür Önder',
+    'meta.description' => 'Özgür Önder - Uzman Takım Lideri, Raporlama ve Planlama Uzmanı. Power BI, Excel ve operasyon yönetimi konularında uzman.',
+    'nav.home' => 'Anasayfa',
+    'nav.about' => 'Hakkımda',
+    'nav.skills' => 'Yetkinlikler',
+    'nav.career' => 'Kariyer',
+    'nav.reports' => 'Mock Data PBI',
+    'nav.contact' => 'İletişim',
+
+    'section.career' => 'Kariyer Yolculuğum',
+    'section.reports' => 'Mock Data & Power BI',
+    'section.reports.subtitle' => '',
+    'section.reports.loading' => 'Rapor yükleniyor…',
+    'section.reports.placeholder' => 'Bu rapor şu anda yapım aşamasındadır. Çok yakında eklenecektir.',
+    'section.reports.lang_notice' => 'Not: İnteraktif dashboard verileri ve arayüzü Türkçe olarak kurgulanmıştır.',
+    'section.reports.open' => 'Yeni sekmede aç',
+    'section.contact' => 'İletişim',
+
+    'report.tab1.title' => 'İK Analitiği',
+    'report.tab2.title' => 'Satış Analizi',
+    'report.tab3.title' => 'Çağrı Merkezi',
+
+    'hero.tag' => 'Takım Lideri • Raporlama & Planlama Uzmanı',
+    'hero.title_html' => 'Ekibi <span class="highlight">Tanı,</span> Metrikleri <span class="highlight">İzle,</span> Operasyonu <span class="highlight">Yönet</span>',
+    'hero.subtitle' => 'Operasyonları ölçülebilir hale getirerek, ekip performansını veriyle yöneten bir liderim. Karar alma süreçlerini güçlendiren analitik sistemler kurar, organizasyonel verimliliği kalıcı olarak artırırım.',
+    'hero.quote_html' => 'Benim için, <strong>Veriyle desteklenmeyen karar, yalnızca bir varsayımdır.</strong>',
+    'hero.cta' => 'İletişime Geç',
+
+    'modal.success.title' => 'Mesajınız İletildi!',
+    'modal.error.title' => 'Bir Sorun Oluştu',
+    'modal.ok' => 'Tamam',
+
+    'about.title_html' => 'Merhaba, ben <span>Özgür</span>',
+    'about.intro_html' => 'Her zaman daha iyisini arayan bir bakış açısıyla çalışıyorum. Ekiplerin ve operasyonların performansını geliştirmek için <strong>veriye dayalı</strong>, şeffaf ve yenilikçi çözümler üretiyorum.',
+    'about.body' => 'Amacım; güvene dayalı, gelişime açık ve fark yaratan bir iş ortamı oluşturmak. Modern teknolojileri ve analitik bakış açısını iş süreçlerine entegre ederek hem bireysel hem de ekip başarılarını destekliyorum.',
+    'about.highlight1' => 'Veri Odaklı Karar Alma',
+    'about.highlight2' => 'Ekip Liderliği & Koçluk',
+    'about.highlight3' => 'Süreç Optimizasyonu',
+
+    'skills.core.title' => 'Temel Yetkinlikler',
+    'skills.core.item1.title' => 'Ekip Liderliği & Koçluk',
+    'skills.core.item1.desc' => 'Takım motivasyonu, performans yönetimi ve bireysel gelişim',
+    'skills.core.item2.title' => 'Veri Odaklı Karar Alma',
+    'skills.core.item2.desc' => 'Analitik düşünce, KPI takibi ve strateji geliştirme',
+    'skills.core.item3.title' => 'Süreç Optimizasyonu',
+    'skills.core.item3.desc' => 'İş akışı iyileştirme, otomasyon ve verimlilik',
+    'skills.core.item4.title' => 'Raporlama & Planlama',
+    'skills.core.item4.desc' => 'Dashboard tasarımı ve performans raporlama',
+    'skills.tools.title' => 'Kullandığım Teknolojiler',
+
+    'footer.copyright' => '© {year} Özgür Önder. Tüm hakları saklıdır.',
+    'contact.name' => 'Ad Soyad',
+    'contact.email' => 'E-posta',
+    'contact.subject' => 'Konu',
+    'contact.message' => 'Mesajınız',
+    'contact.send' => 'Mesaj Gönder',
+    'form.success' => 'Mesajınız başarıyla gönderildi. En kısa sürede size geri dönüş yapılacaktır.',
+    'form.error' => 'Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyiniz.',
+];

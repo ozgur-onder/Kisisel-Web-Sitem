@@ -1,0 +1,62 @@
+<?php
+
+return [
+    'site.name' => 'Özgür Önder',
+    'meta.description' => 'Özgür Önder - Senior Team Lead and Reporting & Workforce Planning Specialist. Expert in Power BI, Excel, and operations management.',
+    'nav.home' => 'Home',
+    'nav.about' => 'About',
+    'nav.skills' => 'Skills',
+    'nav.career' => 'Career',
+    'nav.reports' => 'Mock Data PBI',
+    'nav.contact' => 'Contact',
+
+    'section.career' => 'Career Journey',
+    'section.reports' => 'Mock Data & Power BI',
+    'section.reports.subtitle' => '',
+    'section.reports.loading' => 'Loading report…',
+    'section.reports.placeholder' => 'This report is currently under construction. It will be added very soon.',
+    'section.reports.lang_notice' => 'Note: The interactive dashboard interface and data are built in Turkish.',
+    'section.reports.open' => 'Open in new tab',
+    'section.contact' => 'Contact',
+
+    'report.tab1.title' => 'HR Analytics',
+    'report.tab2.title' => 'Sales Analysis',
+    'report.tab3.title' => 'Call Center',
+
+    'hero.tag' => 'Senior Team Lead • Reporting & Planning',
+    'hero.title_html' => 'Know the <span class="highlight">Team,</span> Track the <span class="highlight">Metrics,</span> Run the <span class="highlight">Operation</span>',
+    'hero.subtitle' => 'I help make operations measurable and lead teams with data. I build analytics systems that strengthen decision-making and drive lasting organizational efficiency.',
+    'hero.quote_html' => 'For me, <strong>a decision without data is only an assumption.</strong>',
+    'hero.cta' => 'Get in Touch',
+
+    'modal.success.title' => 'Message Sent!',
+    'modal.error.title' => 'Something Went Wrong',
+    'modal.ok' => 'OK',
+
+    'about.title_html' => 'Hi, I’m <span>Özgür</span>',
+    'about.intro_html' => 'I work with a mindset of continuous improvement. I create <strong>data-driven</strong>, transparent, and innovative solutions to improve team and operational performance.',
+    'about.body' => 'My goal is to build a trustworthy, growth-oriented, and high-impact work environment. By integrating modern technologies and an analytical mindset into business processes, I support both individual and team success.',
+    'about.highlight1' => 'Data-Driven Decisions',
+    'about.highlight2' => 'Team Leadership & Coaching',
+    'about.highlight3' => 'Process Optimization',
+
+    'skills.core.title' => 'Core Skills',
+    'skills.core.item1.title' => 'Team Leadership & Coaching',
+    'skills.core.item1.desc' => 'Team motivation, performance management, and individual growth',
+    'skills.core.item2.title' => 'Data-Driven Decisions',
+    'skills.core.item2.desc' => 'Analytical thinking, KPI tracking, and strategy development',
+    'skills.core.item3.title' => 'Process Optimization',
+    'skills.core.item3.desc' => 'Workflow improvements, automation, and efficiency',
+    'skills.core.item4.title' => 'Reporting & Planning',
+    'skills.core.item4.desc' => 'Dashboard design and performance reporting',
+    'skills.tools.title' => 'Tools I Use',
+
+    'footer.copyright' => '© {year} Özgür Önder. All rights reserved.',
+    'contact.name' => 'Full name',
+    'contact.email' => 'Email',
+    'contact.subject' => 'Subject',
+    'contact.message' => 'Your message',
+    'contact.send' => 'Send Message',
+    'form.success' => 'Your message has been sent successfully. I will get back to you as soon as possible.',
+    'form.error' => 'Your message could not be sent. Please try again later.',
+];

@@ -1,0 +1,63 @@
+<?php
+
+return [
+    'site.name' => 'Özgür Önder',
+    'meta.description' => 'Özgür Önder – senior teamleider en specialist in rapportage en workforce planning. Expert in Power BI, Excel en operationeel management.',
+    'nav.home' => 'Home',
+    'nav.about' => 'Over mij',
+    'nav.skills' => 'Vaardigheden',
+    'nav.career' => 'Carrière',
+    'nav.reports' => 'Mock Data PBI',
+    'nav.contact' => 'Contact',
+
+    'section.career' => 'Carrière',
+    'section.reports' => 'Mock Data & Power BI',
+    'section.reports.subtitle' => '',
+    'section.reports.loading' => 'Rapport laden…',
+    'section.reports.placeholder' => 'Dit rapport is momenteel in opbouw. Het zal zeer binnenkort worden toegevoegd.',
+    'section.reports.lang_notice' => 'Opmerking: De interactieve dashboard-interface en gegevens zijn in het Turks opgesteld.',
+    'section.reports.open' => 'Openen in nieuw tabblad',
+    'section.contact' => 'Contact',
+
+    'report.tab1.title' => 'HR-analyse',
+    'report.tab2.title' => 'Verkoopanalyse',
+    'report.tab3.title' => 'Callcenter',
+
+    'hero.tag' => 'Senior teamleider • Rapportage & workforce planning',
+    'hero.title_html' => 'Ken het <span class="highlight">team</span>, volg de <span class="highlight">metrics</span>, stuur de <span class="highlight">operatie</span>',
+    'hero.subtitle' => 'Ik maak operations meetbaar en stuur teams met data. Ik bouw analytics-systemen die besluitvorming versterken en duurzame efficiëntie realiseren.',
+    'hero.quote_html' => 'Voor mij is <strong>een beslissing zonder data slechts een aanname.</strong>',
+    'hero.cta' => 'Neem contact op',
+
+    'modal.success.title' => 'Bericht verzonden!',
+    'modal.error.title' => 'Er ging iets mis',
+    'modal.ok' => 'OK',
+
+    'about.title_html' => 'Hoi, ik ben <span>Özgür</span>',
+    'about.intro_html' => 'Ik werk met een mindset of continue verbetering. Om team- en operationele performance te verbeteren, bouw ik <strong>datagedreven</strong>, transparante en innovative oplossingen.',
+    'about.body' => 'Mijn doel is een betrouwbare, groeigerichte en impactvolle werkomgeving te creëren. Door moderne technologieën en een analytische mindset in processen te integreren, ondersteun ik zowel individuele als teamresultaten.',
+    'about.highlight1' => 'Datagedreven beslissingen',
+    'about.highlight2' => 'Teamleiderschap & coaching',
+    'about.highlight3' => 'Procesoptimalisatie',
+
+    'skills.core.title' => 'Kernvaardigheden',
+    'skills.core.item1.title' => 'Teamleiderschap & coaching',
+    'skills.core.item1.desc' => 'Teammotivatie, performance management en individuele groei',
+    'skills.core.item2.title' => 'Datagedreven beslissingen',
+    'skills.core.item2.desc' => 'Analytisch denken, KPI-tracking en strategieontwikkeling',
+    'skills.core.item3.title' => 'Procesoptimalisatie',
+    'skills.core.item3.desc' => 'Workflow-verbetering, automatisering en efficiëntie',
+    'skills.core.item4.title' => 'Reporting & planning',
+    'skills.core.item4.desc' => 'Dashboarddesign en performance reporting',
+    'skills.tools.title' => 'Tools die ik gebruik',
+
+    'dropdown.menu' => 'Menu',
+    'footer.copyright' => '© {year} Özgür Önder. Alle rechten voorbehouden.',
+    'contact.name' => 'Naam',
+    'contact.email' => 'E-mail',
+    'contact.subject' => 'Onderwerp',
+    'contact.message' => 'Je bericht',
+    'contact.send' => 'Bericht verzenden',
+    'form.success' => 'Je bericht is succesvol verzonden. Ik neem zo snel mogelijk contact met je op.',
+    'form.error' => 'Je bericht kon niet worden verzonden. Probeer het later opnieuw.',
+];

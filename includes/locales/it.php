@@ -1,0 +1,62 @@
+<?php
+
+return [
+    'site.name' => 'Özgür Önder',
+    'meta.description' => 'Özgür Önder – team leader senior e specialista in reportistica e workforce planning. Esperto di Power BI, Excel e gestione operativa.',
+    'nav.home' => 'Home',
+    'nav.about' => 'Chi sono',
+    'nav.skills' => 'Competenze',
+    'nav.career' => 'Carriera',
+    'nav.reports' => 'Dati Fittizi PBI',
+    'nav.contact' => 'Contatti',
+
+    'section.career' => 'Percorso',
+    'section.reports' => 'Dati Fittizi & Power BI',
+    'section.reports.subtitle' => '',
+    'section.reports.loading' => 'Caricamento del rapporto…',
+    'section.reports.placeholder' => 'Questo rapporto è attualmente in fase di costruzione. Sarà aggiunto molto presto.',
+    'section.reports.lang_notice' => 'Nota: L’interfaccia della dashboard interattiva e i dati sono configurati in turco.',
+    'section.reports.open' => 'Apri in una nuova scheda',
+    'section.contact' => 'Contatti',
+
+    'report.tab1.title' => 'Analisi delle RU',
+    'report.tab2.title' => 'Analisi delle vendite',
+    'report.tab3.title' => 'Call center',
+
+    'hero.tag' => 'Team leader senior • Reportistica & workforce planning',
+    'hero.title_html' => 'Conosci il <span class="highlight">team</span>, monitora le <span class="highlight">metriche</span>, guida l’<span class="highlight">operatività</span>',
+    'hero.subtitle' => 'Rendo le operazioni misurabili e guido i team con i dati. Costruisco sistemi analitici che rafforzano le decisioni e migliorano l’efficienza nel tempo.',
+    'hero.quote_html' => 'Per me, <strong>una decisione senza dati è solo un’ipotesi.</strong>',
+    'hero.cta' => 'Contattami',
+
+    'modal.success.title' => 'Messaggio inviato!',
+    'modal.error.title' => 'Si è verificato un problema',
+    'modal.ok' => 'OK',
+
+    'about.title_html' => 'Ciao, sono <span>Özgür</span>',
+    'about.intro_html' => 'Lavoro con una mentalità di miglioramento continuo. Per aumentare la performance di team e operazioni, realizzo soluzioni <strong>data-driven</strong>, trasparenti e innovative.',
+    'about.body' => 'Il mio obiettivo è creare un ambiente di lavoro basato sulla fiducia, orientato alla crescita e ad alto impatto. Integrando tecnologie moderne e un approccio analitico nei processi, supporto il successo sia individuale che di squadra.',
+    'about.highlight1' => 'Decisioni data-driven',
+    'about.highlight2' => 'Leadership & coaching',
+    'about.highlight3' => 'Ottimizzazione dei processi',
+
+    'skills.core.title' => 'Competenze chiave',
+    'skills.core.item1.title' => 'Leadership & coaching',
+    'skills.core.item1.desc' => 'Motivazione del team, gestione delle performance e crescita individuale',
+    'skills.core.item2.title' => 'Decisioni data-driven',
+    'skills.core.item2.desc' => 'Pensiero analitico, monitoraggio KPI e sviluppo strategico',
+    'skills.core.item3.title' => 'Ottimizzazione dei processi',
+    'skills.core.item3.desc' => 'Miglioramento dei flussi, automatizzazione ed efficienza',
+    'skills.core.item4.title' => 'Reporting & pianificazione',
+    'skills.core.item4.desc' => 'Design di dashboard e reporting delle performance',
+    'skills.tools.title' => 'Strumenti che utilizzo',
+
+    'footer.copyright' => '© {year} Özgür Önder. Tutti i diritti riservati.',
+    'contact.name' => 'Nome e cognome',
+    'contact.email' => 'Email',
+    'contact.subject' => 'Oggetto',
+    'contact.message' => 'Il tuo messaggio',
+    'contact.send' => 'Invia messaggio',
+    'form.success' => 'Il tuo messaggio è stato inviato con successo. Ti risponderò il prima possibile.',
+    'form.error' => 'Non è stato possibile inviare il tuo messaggio. Per favore riprova più tardi.',
+];

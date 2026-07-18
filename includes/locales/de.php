@@ -1,0 +1,62 @@
+<?php
+
+return [
+    'site.name' => 'Özgür Önder',
+    'meta.description' => 'Özgür Önder – Senior Team Lead sowie Spezialist für Reporting und Kapazitäts-/Einsatzplanung. Experte für Power BI, Excel und operatives Management.',
+    'nav.home' => 'Startseite',
+    'nav.about' => 'Über mich',
+    'nav.skills' => 'Fähigkeiten',
+    'nav.career' => 'Karriere',
+    'nav.reports' => 'Mock-Daten PBI',
+    'nav.contact' => 'Kontakt',
+
+    'section.career' => 'Karriereweg',
+    'section.reports' => 'Mock-Daten & Power BI',
+    'section.reports.subtitle' => '',
+    'section.reports.loading' => 'Bericht wird geladen…',
+    'section.reports.placeholder' => 'Dieser Bericht befindet sich zurzeit im Aufbau. Er wird in Kürze hinzugefügt.',
+    'section.reports.lang_notice' => 'Hinweis: Die interaktive Dashboard-Benutzeroberfläche und die Daten sind auf Türkisch erstellt.',
+    'section.reports.open' => 'In neuem Tab öffnen',
+    'section.contact' => 'Kontakt',
+
+    'report.tab1.title' => 'HR-Analytik',
+    'report.tab2.title' => 'Verkaufsanalyse',
+    'report.tab3.title' => 'Callcenter',
+
+    'hero.tag' => 'Senior Team Lead • Reporting & Workforce Planning',
+    'hero.title_html' => 'Lerne das <span class="highlight">Team</span> kennen, verfolge <span class="highlight">Kennzahlen</span>, steuere den <span class="highlight">Betrieb</span>',
+    'hero.subtitle' => 'Ich mache Operations messbar und führe Teams datenbasiert. Ich entwickle Analytik-Systeme, die Entscheidungen stärken und nachhaltige Effizienz ermöglichen.',
+    'hero.quote_html' => 'Für mich ist <strong>eine Entscheidung ohne Daten nur eine Annahme.</strong>',
+    'hero.cta' => 'Kontakt aufnehmen',
+
+    'modal.success.title' => 'Nachricht gesendet!',
+    'modal.error.title' => 'Etwas ist schiefgelaufen',
+    'modal.ok' => 'OK',
+
+    'about.title_html' => 'Hallo, ich bin <span>Özgür</span>',
+    'about.intro_html' => 'Ich arbeite mit dem Anspruch, mich kontinuierlich zu verbessern. Um Team- und Operativleistung zu steigern, entwickle ich <strong>datenbasierte</strong>, transparente und innovative Lösungen.',
+    'about.body' => 'Mein Ziel ist ein vertrauensvolles, entwicklungsorientiertes und wirkungsstarkes Arbeitsumfeld. Durch die Integration moderner Technologien und analytischer Denkweise in Prozesse unterstütze ich sowohl individuelle als auch Team-Erfolge.',
+    'about.highlight1' => 'Datenbasierte Entscheidungen',
+    'about.highlight2' => 'Teamführung & Coaching',
+    'about.highlight3' => 'Prozessoptimierung',
+
+    'skills.core.title' => 'Kernkompetenzen',
+    'skills.core.item1.title' => 'Teamführung & Coaching',
+    'skills.core.item1.desc' => 'Teammotivation, Performance-Management und individuelle Entwicklung',
+    'skills.core.item2.title' => 'Datenbasierte Entscheidungen',
+    'skills.core.item2.desc' => 'Analytisches Denken, KPI-Tracking und Strategieentwicklung',
+    'skills.core.item3.title' => 'Prozessoptimierung',
+    'skills.core.item3.desc' => 'Workflow-Verbesserungen, Automatisierung und Effizienz',
+    'skills.core.item4.title' => 'Reporting & Planung',
+    'skills.core.item4.desc' => 'Dashboard-Design und Performance-Reporting',
+    'skills.tools.title' => 'Tools, die ich nutze',
+
+    'footer.copyright' => '© {year} Özgür Önder. Alle Rechte vorbehalten.',
+    'contact.name' => 'Name',
+    'contact.email' => 'E-Mail',
+    'contact.subject' => 'Betreff',
+    'contact.message' => 'Ihre Nachricht',
+    'contact.send' => 'Nachricht senden',
+    'form.success' => 'Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich so bald wie möglich bei Ihnen.',
+    'form.error' => 'Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.',
+];
