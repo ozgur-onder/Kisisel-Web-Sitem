@@ -60,7 +60,7 @@ return [
     'form.success' => 'Ditt meddelande har skickats. Jag återkommer så snart som möjligt.',
     'form.error' => 'Ditt meddelande kunde inte skickas. Försök igen senare.',
 
-    'section.reports.credentials.hint'     => 'För att prova den interaktiva versionen:',
+    'section.reports.credentials.hint'     => 'Klicka på bilden för att prova den interaktiva versionen. Du kan använda e-post och lösenord för att få åtkomst till den öppnade rapporten.',
     'section.reports.credentials.email_label'    => 'E-post',
     'section.reports.credentials.password_label' => 'Lösenord',
     'section.reports.view_interactive'      => 'Öppna interaktiv rapport',

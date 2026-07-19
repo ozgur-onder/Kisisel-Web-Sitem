@@ -60,8 +60,7 @@ return [
     'form.success' => 'Votre message a été envoyé avec succès. Je vous répondrai dès que possible.',
     'form.error' => 'Votre message n\'a pas pu être envoyé. Veuillez réessayer plus tard.',
 
-    'section.reports.credentials.hint'     => 'Pour essayer la version interactive :',
-    'section.reports.credentials.email_label'    => 'E-mail',
+    'section.reports.credentials.hint'     => 'Cliquez sur l\'image pour essayer la version interactive. Vous pouvez utiliser l\'e-mail et le mot de passe pour accéder au rapport ouvert',    'section.reports.credentials.email_label'    => 'E-mail',
     'section.reports.credentials.password_label' => 'Mot de passe',
     'section.reports.view_interactive'      => 'Ouvrir le rapport interactif',
 ];

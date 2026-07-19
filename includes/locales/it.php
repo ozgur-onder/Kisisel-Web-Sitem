@@ -60,8 +60,7 @@ return [
     'form.success' => 'Il tuo messaggio è stato inviato con successo. Ti risponderò il prima possibile.',
     'form.error' => 'Non è stato possibile inviare il tuo messaggio. Per favore riprova più tardi.',
 
-    'section.reports.credentials.hint'     => 'Per provare la versione interattiva:',
-    'section.reports.credentials.email_label'    => 'E-mail',
+    'section.reports.credentials.hint'     => 'Fai clic sull\'immagine per provare la versione interattiva. Puoi utilizzare l\'e-mail e la password per accedere al rapporto aperto.',    'section.reports.credentials.email_label'    => 'E-mail',
     'section.reports.credentials.password_label' => 'Password',
     'section.reports.view_interactive'      => 'Apri il report interattivo',
 ];
