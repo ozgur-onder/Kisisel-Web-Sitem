@@ -60,4 +60,9 @@ return [
     'contact.send' => 'Bericht verzenden',
     'form.success' => 'Je bericht is succesvol verzonden. Ik neem zo snel mogelijk contact met je op.',
     'form.error' => 'Je bericht kon niet worden verzonden. Probeer het later opnieuw.',
+
+    'section.reports.credentials.hint'     => 'Om de interactieve versie te proberen:',
+    'section.reports.credentials.email_label'    => 'E-mail',
+    'section.reports.credentials.password_label' => 'Wachtwoord',
+    'section.reports.view_interactive'      => 'Interactief rapport openen',
 ];

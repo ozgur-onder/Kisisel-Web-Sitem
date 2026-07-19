@@ -21,6 +21,14 @@ $metaDescription = t('meta.description');
 $siteBase = 'https://ozguronder.com.tr/';
 $socialImage = $siteBase . 'Logo.png';
 
+// ── Power BI Demo Kimlik Bilgileri ────────────────────────────────────────
+// Gerçek demo hesabınızın bilgilerini buraya girin:
+$pbiEmail    = 'demo@ozguronder.com.tr';   // ← gerçek demo e-postanızı yazın
+$pbiPassword = 'Demo2024!';                 // ← gerçek demo şifrenizi yazın
+// Raporun doğrudan paylaşım URL'si (embed değil, Power BI'dan "Paylaş" linki):
+$pbiHrUrl    = 'https://app.powerbi.com/reportEmbed?reportId=9aabcef7-7fcd-4b10-8791-244333accd71&autoAuth=true&ctid=08005930-ab3e-4ee4-8f83-476daad83a73';
+// ─────────────────────────────────────────────────────────────────────────
+
 // Form işleme
 $formSubmitted = false;
 $formSuccess = false;
@@ -78,14 +86,14 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" &&
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="assets/css/style.css?v=10.5">
+    <link rel="stylesheet" href="assets/css/style.css?v=11.0">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Özgür Önder",
         "url": "<?php echo htmlspecialchars($siteBase, ENT_QUOTES, 'UTF-8'); ?>",
-        "jobTitle": "<?php echo htmlspecialchars(t('hero.tag_plain') ?? 'Operasyonel Lider', ENT_QUOTES, 'UTF-8'); ?>",
+        "jobTitle": "Senior Team Lead",
         "image": "<?php echo htmlspecialchars($socialImage, ENT_QUOTES, 'UTF-8'); ?>",
         "email": "info@ozguronder.com.tr",
         "sameAs": [
@@ -312,81 +320,135 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" &&
     <section id="raporlar" class="section-dark">
         <div class="container">
             <div class="text-center mb-4">
-                <h2 class="section-title" style="font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,var(--primary-color),rgba(242,200,17,0.7));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:0 0 40px rgba(242,200,17,0.3);margin-bottom:0.5rem;letter-spacing:1px;"><?php echo htmlspecialchars(t('section.reports'), ENT_QUOTES, 'UTF-8'); ?></h2>
-                <p class="text-secondary mb-0" style="font-size:0.9rem;"><?php echo htmlspecialchars(t('section.reports.subtitle'), ENT_QUOTES, 'UTF-8'); ?></p>
+                <h2 class="section-title" style="font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,var(--primary-color),rgba(242,200,17,0.7));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:0 0 40px rgba(242,200,17,0.3);margin-bottom:0.5rem;letter-spacing:1px;">
+                    <?php echo htmlspecialchars(t('section.reports'), ENT_QUOTES, 'UTF-8'); ?>
+                </h2>
+                <p class="text-secondary mb-0" style="font-size:0.9rem;">
+                    <?php echo htmlspecialchars(t('section.reports.subtitle'), ENT_QUOTES, 'UTF-8'); ?>
+                </p>
             </div>
 
             <div class="powerbi-wrapper">
+
+                <!-- Sekmeler -->
                 <div class="powerbi-tabs-scroll">
                     <ul class="nav powerbi-tabs" id="powerbiTabs" role="tablist">
+
+                        <!-- ─ Sekme 1: İK Analitiği ─────────────────────────────────────────
+                             data-images: Rapor sayfalarının görsel yollarını JSON dizisi olarak girin.
+                             Tek sayfa  → ["assets/img/reports/hr-1.jpg"]
+                             Üç sayfa   → ["assets/img/reports/hr-1.jpg","assets/img/reports/hr-2.jpg","assets/img/reports/hr-3.jpg"]
+                             Görsel yok → [] (placeholder gösterilir)
+                        -->
                         <li class="nav-item" role="presentation">
                             <button class="powerbi-tab-btn active"
-                                    data-embed-url="https://app.powerbi.com/reportEmbed?reportId=9aabcef7-7fcd-4b10-8791-244333accd71&autoAuth=true&ctid=08005930-ab3e-4ee4-8f83-476daad83a73"
+                                    data-images='["assets/img/reports/hr-1.jpg"]'
+                                    data-report-url="<?php echo htmlspecialchars($pbiHrUrl, ENT_QUOTES, 'UTF-8'); ?>"
                                     data-report-title="<?php echo htmlspecialchars(t('report.tab1.title'), ENT_QUOTES, 'UTF-8'); ?>"
-                                    data-report-icon="bi-people-fill"
                                     aria-selected="true">
-                                <i class="bi bi-people-fill"></i> <?php echo htmlspecialchars(t('report.tab1.title'), ENT_QUOTES, 'UTF-8'); ?>
+                                <i class="bi bi-people-fill"></i>
+                                <?php echo htmlspecialchars(t('report.tab1.title'), ENT_QUOTES, 'UTF-8'); ?>
                             </button>
                         </li>
+
+                        <!-- ─ Sekme 2: Satış Analizi ─── -->
                         <li class="nav-item" role="presentation">
                             <button class="powerbi-tab-btn"
-                                    data-embed-url=""
+                                    data-images='[]'
+                                    data-report-url=""
                                     data-report-title="<?php echo htmlspecialchars(t('report.tab2.title'), ENT_QUOTES, 'UTF-8'); ?>"
-                                    data-report-icon="bi-graph-up-arrow"
                                     aria-selected="false">
-                                <i class="bi bi-graph-up-arrow"></i> <?php echo htmlspecialchars(t('report.tab2.title'), ENT_QUOTES, 'UTF-8'); ?>
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <?php echo htmlspecialchars(t('report.tab2.title'), ENT_QUOTES, 'UTF-8'); ?>
                             </button>
                         </li>
+
+                        <!-- ─ Sekme 3: Çağrı Merkezi ─── -->
                         <li class="nav-item" role="presentation">
                             <button class="powerbi-tab-btn"
-                                    data-embed-url=""
+                                    data-images='[]'
+                                    data-report-url=""
                                     data-report-title="<?php echo htmlspecialchars(t('report.tab3.title'), ENT_QUOTES, 'UTF-8'); ?>"
-                                    data-report-icon="bi-headset"
                                     aria-selected="false">
-                                <i class="bi bi-headset"></i> <?php echo htmlspecialchars(t('report.tab3.title'), ENT_QUOTES, 'UTF-8'); ?>
+                                <i class="bi bi-headset"></i>
+                                <?php echo htmlspecialchars(t('report.tab3.title'), ENT_QUOTES, 'UTF-8'); ?>
                             </button>
                         </li>
+
                     </ul>
                 </div>
 
+                <!-- Görsel / Carousel / Placeholder alanı -->
                 <div class="powerbi-frame-area">
-                    <div class="powerbi-loading d-none" id="powerbiLoading">
-                        <div class="spinner-border text-warning" role="status" style="width:2.5rem;height:2.5rem;"></div>
-                        <span><?php echo htmlspecialchars(t('section.reports.loading'), ENT_QUOTES, 'UTF-8'); ?></span>
+
+                    <!-- Carousel JS tarafından buraya oluşturulur -->
+                    <div id="powerbiImageContainer" class="powerbi-image-container d-none"></div>
+
+                    <!-- Görseli olmayan sekmeler için placeholder -->
+                    <div class="powerbi-placeholder" id="powerbiPlaceholder">
+                        <i class="bi bi-tools powerbi-ph-icon"
+                           style="font-size:3.5rem;color:rgba(242,200,17,0.4);"></i>
+                        <h4 class="powerbi-ph-title" id="powerbiPlaceholderTitle">
+                            <?php echo htmlspecialchars(t('report.tab1.title'), ENT_QUOTES, 'UTF-8'); ?>
+                        </h4>
+                        <p class="powerbi-ph-text"
+                           style="margin-top:10px;font-size:1rem;color:rgba(255,255,255,0.7);">
+                            <?php echo htmlspecialchars(t('section.reports.placeholder'), ENT_QUOTES, 'UTF-8'); ?>
+                        </p>
                     </div>
 
-                    <div class="powerbi-placeholder" id="powerbiPlaceholder">
-    <i class="bi bi-tools powerbi-ph-icon" style="font-size: 3.5rem; color: rgba(242,200,17,0.4);"></i>
-    <h4 class="powerbi-ph-title" id="powerbiPlaceholderTitle"><?php echo htmlspecialchars(t('report.tab1.title'), ENT_QUOTES, 'UTF-8'); ?></h4>
-    <p class="powerbi-ph-text" style="margin-top: 10px; font-size: 1rem; color: rgba(255,255,255,0.7);">
-        <?php echo htmlspecialchars(t('section.reports.placeholder'), ENT_QUOTES, 'UTF-8'); ?>
-    </p>
-</div>
-
-                    <iframe id="powerbiFrame"
-                            src=""
-                            class="powerbi-iframe d-none"
-                            frameborder="0"
-                            allowFullScreen="true"
-                            title="Power BI Report"
-                            loading="lazy">
-                    </iframe>
                 </div>
 
-                <div class="text-center mt-2">
-                    <small class="text-secondary" style="font-size: 0.8rem; letter-spacing: 0.5px; opacity: 0.7;">
-                        <i class="bi bi-info-circle me-1 text-warning"></i> <?php echo htmlspecialchars(t('section.reports.lang_notice'), ENT_QUOTES, 'UTF-8'); ?>
+                <!-- Kimlik Bilgileri Çubuğu -->
+                <div class="powerbi-credentials-bar d-none" id="powerbiCredBar">
+                    <div class="powerbi-cred-hint">
+                        <i class="bi bi-key-fill text-warning"></i>
+                        <?php echo htmlspecialchars(t('section.reports.credentials.hint'), ENT_QUOTES, 'UTF-8'); ?>
+                    </div>
+                    <div class="powerbi-cred-fields">
+                        <div class="powerbi-cred-item">
+                            <span class="powerbi-cred-label">
+                                <?php echo htmlspecialchars(t('section.reports.credentials.email_label'), ENT_QUOTES, 'UTF-8'); ?>
+                            </span>
+                            <span class="powerbi-cred-value"
+                                  data-copy-text="<?php echo htmlspecialchars($pbiEmail, ENT_QUOTES, 'UTF-8'); ?>"
+                                  onclick="pbiCopyText(this)"
+                                  title="Kopyalamak için tıklayın">
+                                <?php echo htmlspecialchars($pbiEmail, ENT_QUOTES, 'UTF-8'); ?>
+                            </span>
+                        </div>
+                        <div class="powerbi-cred-item">
+                            <span class="powerbi-cred-label">
+                                <?php echo htmlspecialchars(t('section.reports.credentials.password_label'), ENT_QUOTES, 'UTF-8'); ?>
+                            </span>
+                            <span class="powerbi-cred-value"
+                                  data-copy-text="<?php echo htmlspecialchars($pbiPassword, ENT_QUOTES, 'UTF-8'); ?>"
+                                  onclick="pbiCopyText(this)"
+                                  title="Kopyalamak için tıklayın">
+                                <?php echo htmlspecialchars($pbiPassword, ENT_QUOTES, 'UTF-8'); ?>
+                            </span>
+                        </div>
+                    </div>
+                    <a id="powerbiOpenLink" href="#" target="_blank" rel="noopener"
+                       class="btn btn-primary powerbi-open-btn">
+                        <i class="bi bi-box-arrow-up-right me-1"></i>
+                        <?php echo htmlspecialchars(t('section.reports.view_interactive'), ENT_QUOTES, 'UTF-8'); ?>
+                    </a>
+                </div>
+
+                <!-- Dil notu -->
+                <div class="text-center py-2">
+                    <small class="text-secondary"
+                           style="font-size:0.8rem;letter-spacing:0.5px;opacity:0.7;">
+                        <i class="bi bi-info-circle me-1 text-warning"></i>
+                        <?php echo htmlspecialchars(t('section.reports.lang_notice'), ENT_QUOTES, 'UTF-8'); ?>
                     </small>
                 </div>
 
-                <div class="powerbi-footer d-none" id="powerbiFooter">
-                    <a href="#" id="powerbiOpenLink" target="_blank" rel="noopener" class="powerbi-external-link">
-                        <i class="bi bi-box-arrow-up-right me-1"></i><?php echo htmlspecialchars(t('section.reports.open'), ENT_QUOTES, 'UTF-8'); ?>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
+
     <section id="iletisim">
         <div class="container">
             <div class="text-center mb-3">
@@ -464,6 +526,6 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" &&
     </script>
     <?php endif; ?>
 
-    <script src="assets/js/main.js?v=3.2"></script>
+    <script src="assets/js/main.js?v=4.0"></script>
 </body>
 </html>

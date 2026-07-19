@@ -225,61 +225,189 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
 // ============================================================
-// POWER BI RAPORLAR SEKME YÖNETİMİ
+// POWER BI RAPORLAR — SEKME & CAROUSEL YÖNETİMİ
 // ============================================================
 document.addEventListener('DOMContentLoaded', function () {
-    const tabs        = document.querySelectorAll('.powerbi-tab-btn');
-    const iframe      = document.getElementById('powerbiFrame');
-    const placeholder = document.getElementById('powerbiPlaceholder');
-    const loading     = document.getElementById('powerbiLoading');
-    const footer      = document.getElementById('powerbiFooter');
-    const openLink    = document.getElementById('powerbiOpenLink');
-    const phTitle     = document.getElementById('powerbiPlaceholderTitle');
+    const tabs           = document.querySelectorAll('.powerbi-tab-btn');
+    const placeholder    = document.getElementById('powerbiPlaceholder');
+    const phTitle        = document.getElementById('powerbiPlaceholderTitle');
+    const imageContainer = document.getElementById('powerbiImageContainer');
+    const credBar        = document.getElementById('powerbiCredBar');
+    const openLink       = document.getElementById('powerbiOpenLink');
+    const frameArea      = document.querySelector('.powerbi-frame-area');
 
-    if (!tabs.length || !iframe) return;
+    if (!tabs.length) return;
 
     function activateTab(btn) {
-        // Aktif sekme stilini güncelle
         tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
 
-        const url   = (btn.dataset.embedUrl || '').trim();
-        const title = (btn.dataset.reportTitle || '').trim();
+        const reportUrl = (btn.dataset.reportUrl   || '').trim();
+        const title     = (btn.dataset.reportTitle || '').trim();
 
-        // Placeholder başlığını güncelle
+        // data-images: JSON dizisi → ["img1.jpg","img2.jpg",...]
+        let images = [];
+        try { images = JSON.parse(btn.dataset.images || '[]'); } catch(e) { images = []; }
+        images = images.filter(Boolean);
+
         if (phTitle) phTitle.textContent = title;
 
-        if (!url) {
-            // Embed URL boş → placeholder göster
-            iframe.classList.add('d-none');
-            if (loading) loading.classList.add('d-none');
-            if (footer)  footer.classList.add('d-none');
-            if (placeholder) placeholder.style.display = '';
-            return;
+        if (images.length > 0) {
+            // Görseller var → carousel yap
+            if (placeholder)    placeholder.style.display = 'none';
+            if (imageContainer) {
+                imageContainer.classList.remove('d-none');
+                buildCarousel(imageContainer, images, reportUrl, title);
+            }
+            if (frameArea) frameArea.classList.add('has-image');
+            if (credBar)   credBar.classList.remove('d-none');
+            if (openLink)  openLink.href = reportUrl || '#';
+        } else {
+            // Görsel yok → placeholder
+            if (imageContainer) imageContainer.classList.add('d-none');
+            if (frameArea)      frameArea.classList.remove('has-image');
+            if (credBar)        credBar.classList.add('d-none');
+            if (placeholder)    placeholder.style.display = '';
         }
-
-        // Embed URL var → iframe yükle
-        if (placeholder) placeholder.style.display = 'none';
-        if (loading) loading.classList.remove('d-none');
-        iframe.classList.add('d-none');
-        if (footer) footer.classList.add('d-none');
-
-        iframe.onload = function () {
-    console.log("Iframe yüklendi!"); // Tarayıcı konsolunda (F12) bu yazıyı görüyor musun?
-    if (loading) loading.classList.add('d-none');
-    iframe.classList.remove('d-none');
-    if (footer) footer.classList.remove('d-none');
-};
-
-        iframe.src = url;
     }
 
-    tabs.forEach(btn => {
-        btn.addEventListener('click', function () { activateTab(this); });
-    });
-
-    // İlk sekmeyi başlat
+    tabs.forEach(btn => btn.addEventListener('click', function () { activateTab(this); }));
     if (tabs[0]) activateTab(tabs[0]);
 });
+
+// ── Carousel: HTML oluştur ─────────────────────────────────
+function buildCarousel(container, images, reportUrl, title) {
+    const multi = images.length > 1;
+    const safeUrl = reportUrl ? reportUrl.replace(/'/g, "\\'") : '';
+    const clickAttr = reportUrl
+        ? `onclick="window.open('${safeUrl}','_blank','noopener')" style="cursor:pointer"`
+        : '';
+
+    let html = `<div class="pbi-carousel" data-current="0">`;
+
+    // Sayaç (sadece çoklu görselde)
+    if (multi) {
+        html += `<div class="pbi-carousel-counter">
+                    <span class="pbi-current">1</span> / ${images.length}
+                 </div>`;
+    }
+
+    // Slayt track
+    html += `<div class="pbi-carousel-track">`;
+    images.forEach((src, i) => {
+        html += `<div class="pbi-slide">
+                    <img src="${src}"
+                         alt="${title} – Sayfa ${i + 1}"
+                         loading="${i === 0 ? 'eager' : 'lazy'}"
+                         ${clickAttr}>
+                 </div>`;
+    });
+    html += `</div>`;
+
+    // İleri / Geri butonları + Noktalar (sadece çoklu görselde)
+    if (multi) {
+        html += `<button class="pbi-carousel-btn pbi-prev"
+                         onclick="pbiMove(this,-1)"
+                         aria-label="Önceki sayfa">
+                    <i class="bi bi-chevron-left"></i>
+                 </button>
+                 <button class="pbi-carousel-btn pbi-next"
+                         onclick="pbiMove(this,1)"
+                         aria-label="Sonraki sayfa">
+                    <i class="bi bi-chevron-right"></i>
+                 </button>
+                 <div class="pbi-dots">`;
+        images.forEach((_, i) => {
+            html += `<button class="pbi-dot${i === 0 ? ' active' : ''}"
+                              onclick="pbiGoTo(this.closest('.pbi-carousel'),${i})"
+                              aria-label="Sayfa ${i + 1}"></button>`;
+        });
+        html += `</div>`;
+    }
+
+    html += `</div>`; // .pbi-carousel
+    container.innerHTML = html;
+
+    // İlk konumu uygula (prev gizli)
+    pbiUpdateState(container.querySelector('.pbi-carousel'), 0, images.length);
+
+    // Dokunmatik kaydırma (swipe) desteği
+    if (multi) {
+        const track = container.querySelector('.pbi-carousel-track');
+        let startX = 0;
+        track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) < 40) return; // Çok kısa swipe'ı yoksay
+            const carousel = container.querySelector('.pbi-carousel');
+            const current  = parseInt(carousel.dataset.current || '0');
+            const total    = images.length;
+            const next     = diff > 0 ? Math.min(current + 1, total - 1) : Math.max(current - 1, 0);
+            if (next !== current) pbiGoTo(carousel, next);
+        }, { passive: true });
+    }
+}
+
+// ── Carousel: İleri / Geri butonu ─────────────────────────
+function pbiMove(btn, dir) {
+    const carousel = btn.closest('.pbi-carousel');
+    const total    = carousel.querySelectorAll('.pbi-slide').length;
+    const current  = parseInt(carousel.dataset.current || '0');
+    const next     = current + dir;
+    if (next >= 0 && next < total) pbiGoTo(carousel, next);
+}
+
+// ── Carousel: Belirli slayta git ──────────────────────────
+function pbiGoTo(carousel, index) {
+    pbiUpdateState(carousel, index, carousel.querySelectorAll('.pbi-slide').length);
+}
+
+// ── Carousel: Durumu güncelle ──────────────────────────────
+function pbiUpdateState(carousel, index, total) {
+    carousel.dataset.current = index;
+
+    // Track'i kaydır
+    const track = carousel.querySelector('.pbi-carousel-track');
+    if (track) track.style.transform = `translateX(-${index * 100}%)`;
+
+    // Sayaç
+    const counter = carousel.querySelector('.pbi-current');
+    if (counter) counter.textContent = index + 1;
+
+    // Noktalar
+    carousel.querySelectorAll('.pbi-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+
+    // Prev / Next görünürlüğü (doğrusal navigasyon)
+    const prevBtn = carousel.querySelector('.pbi-prev');
+    const nextBtn = carousel.querySelector('.pbi-next');
+    if (prevBtn) prevBtn.style.display = index === 0           ? 'none' : '';
+    if (nextBtn) nextBtn.style.display = index === total - 1   ? 'none' : '';
+}
+
+// ── Panoya kopyalama (kimlik bilgileri için) ───────────────
+function pbiCopyText(el) {
+    const text     = (el.dataset.copyText || el.textContent).trim();
+    const original = el.textContent.trim();
+    navigator.clipboard.writeText(text).then(() => {
+        el.textContent = '✓';
+        el.style.cssText = 'background:rgba(72,199,116,0.2);border-color:rgba(72,199,116,0.4);color:#48c774';
+        setTimeout(() => { el.textContent = original; el.style.cssText = ''; }, 1500);
+    }).catch(() => {
+        try {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.cssText = 'position:fixed;opacity:0';
+            document.body.appendChild(ta);
+            ta.focus(); ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            el.textContent = '✓';
+            setTimeout(() => { el.textContent = original; }, 1500);
+        } catch(e) {}
+    });
+}

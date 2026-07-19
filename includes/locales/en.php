@@ -33,7 +33,7 @@ return [
     'modal.error.title' => 'Something Went Wrong',
     'modal.ok' => 'OK',
 
-    'about.title_html' => 'Hi, I’m <span>Özgür</span>',
+    'about.title_html' => 'Hi, I\'m <span>Özgür</span>',
     'about.intro_html' => 'I work with a mindset of continuous improvement. I create <strong>data-driven</strong>, transparent, and innovative solutions to improve team and operational performance.',
     'about.body' => 'My goal is to build a trustworthy, growth-oriented, and high-impact work environment. By integrating modern technologies and an analytical mindset into business processes, I support both individual and team success.',
     'about.highlight1' => 'Data-Driven Decisions',
@@ -59,4 +59,9 @@ return [
     'contact.send' => 'Send Message',
     'form.success' => 'Your message has been sent successfully. I will get back to you as soon as possible.',
     'form.error' => 'Your message could not be sent. Please try again later.',
+
+    'section.reports.credentials.hint'     => 'To try the interactive version:',
+    'section.reports.credentials.email_label'    => 'Email',
+    'section.reports.credentials.password_label' => 'Password',
+    'section.reports.view_interactive'      => 'Open Interactive Report',
 ];

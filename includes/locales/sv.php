@@ -26,7 +26,7 @@ return [
     'hero.tag' => 'Senior teamledare • Rapportering & workforce planning',
     'hero.title_html' => 'Lär känna <span class="highlight">teamet</span>, följ <span class="highlight">mätetal</span>, styr <span class="highlight">driften</span>',
     'hero.subtitle' => 'Jag gör verksamheten mätbar och leder team med data. Jag bygger analyslösningar som stärker beslutsfattande och skapar långsiktig effektivitet.',
-    'hero.quote_html' => 'För mi är <strong>ett beslut utan data bara ett antagande.</strong>',
+    'hero.quote_html' => 'För mig är <strong>ett beslut utan data bara ett antagande.</strong>',
     'hero.cta' => 'Kontakta mig',
 
     'modal.success.title' => 'Meddelandet skickat!',
@@ -59,4 +59,9 @@ return [
     'contact.send' => 'Skicka meddelande',
     'form.success' => 'Ditt meddelande har skickats. Jag återkommer så snart som möjligt.',
     'form.error' => 'Ditt meddelande kunde inte skickas. Försök igen senare.',
+
+    'section.reports.credentials.hint'     => 'För att prova den interaktiva versionen:',
+    'section.reports.credentials.email_label'    => 'E-post',
+    'section.reports.credentials.password_label' => 'Lösenord',
+    'section.reports.view_interactive'      => 'Öppna interaktiv rapport',
 ];

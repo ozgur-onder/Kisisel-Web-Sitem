@@ -59,4 +59,9 @@ return [
     'contact.send' => 'Mesaj Gönder',
     'form.success' => 'Mesajınız başarıyla gönderildi. En kısa sürede size geri dönüş yapılacaktır.',
     'form.error' => 'Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyiniz.',
+
+    'section.reports.credentials.hint'     => 'Etkileşimli sürümü denemek için:',
+    'section.reports.credentials.email_label'    => 'E-posta',
+    'section.reports.credentials.password_label' => 'Şifre',
+    'section.reports.view_interactive'      => 'Etkileşimli Raporu Aç',
 ];

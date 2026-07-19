@@ -129,7 +129,7 @@ body::before {
     transition: color 0.3s ease;
     padding: 0.5rem 1rem !important;
     font-size: 0.95rem;
-    white-space: nowrap; /* ALT SATIRA KAYMAYI ENGELLER */
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) { .nav-link { padding: 0.5rem 0 !important; font-size: 0.9rem; } }
@@ -1357,7 +1357,7 @@ footer {
     #iletisim { padding: 50px 1rem 80px !important; }
 }
 
-/* 1280px–1365px: 13" laptop (HP EliteBook 830, Dell XPS 13 vb.) */
+/* 1280px–1365px: 13" laptop */
 @media screen and (min-width: 1280px) and (max-width: 1365px) {
     .container { max-width: 1080px !important; margin-left: auto !important; margin-right: auto !important; }
     .hero-section { padding: 75px 1.5rem 55px !important; }
@@ -1405,7 +1405,7 @@ footer {
     #iletisim { padding: 55px 1rem 85px !important; }
 }
 
-/* 1366px–1439px: Lenovo G580 / ThinkPad E-serisi referans */
+/* 1366px–1439px */
 @media screen and (min-width: 1366px) and (max-width: 1439px) {
     .container { max-width: 1180px !important; margin-left: auto !important; margin-right: auto !important; }
     .hero-section { padding: 80px 2rem 60px !important; }
@@ -1453,7 +1453,7 @@ footer {
     #iletisim { padding: 60px 1rem 100px !important; }
 }
 
-/* 1440px–1535px: MacBook Air 13" / Dell XPS 15 / ThinkPad X1 Carbon */
+/* 1440px–1535px */
 @media screen and (min-width: 1440px) and (max-width: 1535px) {
     .container { max-width: 1280px !important; margin-left: auto !important; margin-right: auto !important; }
     .hero-section { padding: 85px 2rem 65px !important; }
@@ -1501,7 +1501,7 @@ footer {
     #iletisim { padding: 65px 1rem 105px !important; }
 }
 
-/* 1536px–1599px: ThinkPad T/X serisi, Surface Laptop, HP Spectre */
+/* 1536px–1599px */
 @media screen and (min-width: 1536px) and (max-width: 1599px) {
     .container { max-width: 1380px !important; margin-left: auto !important; margin-right: auto !important; }
     .hero-section { padding: 88px 2rem 68px !important; }
@@ -1549,7 +1549,7 @@ footer {
     #iletisim { padding: 68px 1rem 108px !important; }
 }
 
-/* 1600px–1919px: 15" HD+ laptop (ThinkPad L15, HP ProBook 450 vb.) */
+/* 1600px–1919px */
 @media screen and (min-width: 1600px) and (max-width: 1919px) {
     .container { max-width: 1480px !important; margin-left: auto !important; margin-right: auto !important; }
     .hero-section { padding: 90px 2rem 70px !important; }
@@ -1599,8 +1599,6 @@ footer {
 
 @media screen and (min-width: 1920px) {
     .container { max-width: 1600px !important; }
-
-    /* Hero */
     .hero-section { text-align: left !important; padding: 100px 2rem 80px !important; min-height: calc(100vh - 76px) !important; display: flex !important; align-items: center !important; }
     .hero-section .row { flex-wrap: nowrap !important; }
     .hero-section .col-lg-7 { flex: 0 0 58.333% !important; max-width: 58.333% !important; }
@@ -1608,8 +1606,6 @@ footer {
     .hero-section .d-flex.flex-wrap.gap-3 { justify-content: flex-start !important; }
     .hero-image-container { margin-bottom: 0 !important; }
     .hero-profile-img { width: 400px !important; height: 400px !important; margin: 0 !important; }
-
-    /* About */
     #hakkimda { padding: 80px 1rem !important; min-height: 100vh !important; display: block !important; }
     #hakkimda > .container { width: 100% !important; display: flex !important; align-items: center !important; min-height: calc(100vh - 160px) !important; }
     #hakkimda .row { flex-wrap: nowrap !important; }
@@ -1624,8 +1620,6 @@ footer {
     .about-body-collapsible.is-collapsed { max-height: none !important; -webkit-mask-image: none !important; mask-image: none !important; overflow: visible !important; }
     .about-highlights { justify-content: flex-start !important; flex-direction: row !important; flex-wrap: wrap !important; margin-top: 1.25rem !important; }
     .highlight-item { flex: 1 1 calc(50% - 0.5rem) !important; min-width: 200px !important; max-width: none !important; padding: 1rem 1.25rem !important; }
-
-    /* Skills */
     #yetkinlikler { padding: 0 1rem !important; min-height: 100vh !important; display: flex !important; align-items: center !important; }
     #yetkinlikler > .container { width: 100% !important; }
     #yetkinlikler .row { flex-wrap: nowrap !important; }
@@ -1633,8 +1627,6 @@ footer {
     .skills-panel { height: 100% !important; display: flex !important; flex-direction: column !important; padding: 2rem !important; border-radius: 20px !important; }
     .skills-list { flex: 1 !important; gap: 0.75rem !important; }
     .tech-grid { flex: 1 !important; grid-template-columns: repeat(3, 1fr) !important; align-content: center !important; gap: 1.25rem !important; margin-top: 0.75rem !important; }
-
-    /* Timeline */
     #deneyim { padding: 60px 1rem !important; min-height: 100vh !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }
     #deneyim > .container { width: 100% !important; }
     .career-timeline { position: relative !important; max-width: 1200px !important; padding: 0.5rem 0 !important; }
@@ -1646,13 +1638,9 @@ footer {
     .timeline-item:nth-child(even) .timeline-node { left: -12px !important; right: auto !important; }
     .timeline-node { width: 24px !important; height: 24px !important; }
     .timeline-card { width: 100% !important; max-width: 100% !important; padding: 1rem 1.5rem !important; border-radius: 16px !important; }
-
-    /* Contact */
     #iletisim { padding: 80px 1rem 120px !important; min-height: 100vh !important; display: flex !important; align-items: center !important; }
     #iletisim > .container { width: 100% !important; }
     #iletisim .col-lg-9, #iletisim .col-xl-8 { flex: 0 0 66.667% !important; max-width: 66.667% !important; }
-
-    /* Typography & elements */
     .hero-title { font-size: 2.75rem !important; margin-bottom: 1.25rem !important; }
     .hero-subtitle { font-size: 1.2rem !important; margin-bottom: 1.5rem !important; max-width: 650px !important; }
     .hero-quote { font-size: 1.05rem !important; margin-bottom: 1.5rem !important; }
@@ -1932,14 +1920,12 @@ footer {
 
 /* =============================================
    TABLET FINAL OVERRIDE — 768px-1023px
-   Dosyanın en sonunda — hiçbir kural ezemez
    ============================================= */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     body { padding-top: 76px !important; }
     html { scroll-padding-top: 76px !important; }
     .container { max-width: 720px !important; padding-left: 1rem !important; padding-right: 1rem !important; }
 
-    /* Tüm section'lar tam viewport */
     .hero-section, #hakkimda, #yetkinlikler, #deneyim, #iletisim {
         height: calc(100vh - 76px) !important;
         min-height: unset !important;
@@ -1953,7 +1939,6 @@ footer {
         box-sizing: border-box !important;
     }
 
-    /* Kariyer bölümü genişletildiğinde taşmaması için özel durum */
     #deneyim {
         height: auto !important;
         min-height: auto !important;
@@ -1961,9 +1946,7 @@ footer {
         align-items: stretch !important;
         justify-content: flex-start !important;
     }
-    #deneyim > .container {
-        align-items: stretch !important;
-    }
+    #deneyim > .container { align-items: stretch !important; }
 
     .hero-section > .container,
     #hakkimda > .container,
@@ -1975,7 +1958,6 @@ footer {
         margin: 0 auto !important;
     }
 
-    /* Hero */
     .hero-section { text-align: left !important; }
     .hero-section .row { flex-wrap: nowrap !important; align-items: center !important; flex-direction: row !important; }
     .hero-section .col-lg-7 { flex: 0 0 58% !important; max-width: 58% !important; }
@@ -1988,7 +1970,6 @@ footer {
     .hero-section .d-flex.flex-wrap.gap-3 { justify-content: flex-start !important; gap: 0.5rem !important; }
     .hero-image-container { margin-bottom: 0 !important; }
 
-    /* Hakkımda */
     #hakkimda > .container { width: 100% !important; display: block !important; min-height: auto !important; padding-top: 0 !important; padding-bottom: 0 !important; padding-left: 1rem !important; padding-right: 1rem !important; max-width: 720px !important; margin-left: auto !important; margin-right: auto !important; margin-top: 0 !important; margin-bottom: 0 !important; }
     #hakkimda .row { flex-wrap: nowrap !important; align-items: center !important; flex-direction: row !important; }
     #hakkimda .col-lg-5 { flex: 0 0 38% !important; max-width: 38% !important; }
@@ -2005,7 +1986,6 @@ footer {
     .highlight-item span { font-size: 0.78rem !important; }
     #hakkimda .about-readmore { display: none !important; }
 
-    /* Yetkinlikler */
     #yetkinlikler > .container { width: 100% !important; }
     #yetkinlikler .row { flex-wrap: nowrap !important; align-items: stretch !important; flex-direction: row !important; }
     #yetkinlikler .col-lg-6 { flex: 0 0 50% !important; max-width: 50% !important; margin-bottom: 0 !important; }
@@ -2021,7 +2001,6 @@ footer {
     .tech-item img, .tech-item svg { width: 36px !important; height: 36px !important; }
     .tech-item span { font-size: 0.75rem !important; }
 
-    /* Deneyim */
     #deneyim > .container { width: 100% !important; }
     #deneyim .text-center.mb-4 { margin-bottom: 0.35rem !important; }
     #deneyim .section-title { font-size: 1.25rem !important; margin-bottom: 0.35rem !important; }
@@ -2032,7 +2011,6 @@ footer {
     .timeline-year-badge { font-size: 0.8rem !important; padding: 0.25rem 0.6rem !important; }
     .timeline-toggle { width: 26px !important; height: 26px !important; font-size: 0.8rem !important; }
 
-    /* İletişim */
     #iletisim > .container { width: 100% !important; }
     #iletisim .col-lg-9, #iletisim .col-xl-8 { flex: 0 0 100% !important; max-width: 100% !important; }
 }
@@ -2135,61 +2113,9 @@ footer {
     color: rgba(255,255,255,0.4);
     margin: 0;
 }
-.powerbi-ph-hint {
-    display: inline-block;
-    font-size: 0.78rem;
-    color: rgba(242,200,17,0.5);
-    background: rgba(242,200,17,0.06);
-    border: 1px solid rgba(242,200,17,0.15);
-    border-radius: 6px;
-    padding: 0.4rem 0.8rem;
-    font-family: 'SFMono-Regular', Consolas, monospace;
-    max-width: 100%;
-    word-break: break-all;
-}
 
-/* Yükleniyor */
-.powerbi-loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    color: rgba(255,255,255,0.5);
-    font-size: 0.9rem;
-    position: absolute;
-    inset: 0;
-    background: rgba(10,14,20,0.8);
-    z-index: 5;
-    justify-content: center;
-}
-
-/* iframe */
-.powerbi-iframe {
-    width: 100%;
-    height: 600px;
-    border: none;
-    display: block;
-}
-
-/* Footer */
-.powerbi-footer {
-    padding: 0.6rem 1.2rem;
-    border-top: 1px solid rgba(242,200,17,0.1);
-    text-align: right;
-    background: rgba(0,0,0,0.2);
-}
-.powerbi-external-link {
-    font-size: 0.82rem;
-    color: rgba(242,200,17,0.6);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-.powerbi-external-link:hover { color: var(--primary-color); }
-
-/* Responsive */
 @media (max-width: 768px) {
     .powerbi-frame-area { min-height: 380px; }
-    .powerbi-iframe { height: 420px; }
     .powerbi-tab-btn { padding: 0.7rem 1rem; font-size: 0.82rem; }
     .powerbi-ph-icon { font-size: 2.5rem; }
     .powerbi-ph-title { font-size: 1.1rem; }
@@ -2204,4 +2130,180 @@ textarea:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--text-primary) !important;
     -webkit-box-shadow: 0 0 0px 1000px rgba(40, 45, 55, 0.9) inset !important;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ─── POWER BI CREDENTIALS BAR ─────────────────────────────────────────── */
+.powerbi-credentials-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.85rem 1.4rem;
+    background: rgba(242, 200, 17, 0.05);
+    border-top: 1px solid rgba(242, 200, 17, 0.15);
+}
+.powerbi-cred-hint {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+}
+.powerbi-cred-fields {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.powerbi-cred-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.powerbi-cred-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+.powerbi-cred-value {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 0.82rem;
+    color: var(--primary-color);
+    background: rgba(242, 200, 17, 0.1);
+    padding: 0.22rem 0.55rem;
+    border-radius: 6px;
+    border: 1px solid rgba(242, 200, 17, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: all;
+    white-space: nowrap;
+}
+.powerbi-cred-value:hover {
+    background: rgba(242, 200, 17, 0.18);
+    border-color: rgba(242, 200, 17, 0.45);
+}
+.powerbi-open-btn {
+    white-space: nowrap;
+    font-size: 0.82rem !important;
+    padding: 0.4rem 0.95rem !important;
+}
+
+/* ─── POWER BI REPORT IMAGE ─────────────────────────────────────────────── */
+.powerbi-image-container {
+    width: 100%;
+}
+.powerbi-report-image {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.powerbi-report-image:hover { opacity: 0.92; }
+.powerbi-frame-area.has-image {
+    min-height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .powerbi-credentials-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 0.75rem 1rem;
+    }
+    .powerbi-open-btn { width: 100% !important; text-align: center; }
+}
+
+/* ─── POWER BI CAROUSEL ──────────────────────────────────────────────────── */
+.pbi-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.pbi-carousel-track {
+    display: flex;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+.pbi-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+.pbi-slide img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+.pbi-slide img:hover { opacity: 0.93; }
+.pbi-carousel-counter {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    z-index: 10;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+}
+.pbi-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(242, 200, 17, 0.35);
+    border-radius: 50%;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    padding: 0;
+    line-height: 1;
+}
+.pbi-carousel-btn:hover {
+    background: rgba(242, 200, 17, 0.2);
+    border-color: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+.pbi-prev { left: 12px; }
+.pbi-next { right: 12px; }
+.pbi-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 0 8px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.pbi-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.pbi-dot.active {
+    background: var(--primary-color);
+    transform: scale(1.35);
+}
+.pbi-dot:hover:not(.active) { background: rgba(255, 255, 255, 0.5); }
+@media (max-width: 576px) {
+    .pbi-carousel-btn { width: 32px; height: 32px; font-size: 0.85rem; }
+    .pbi-prev { left: 6px; }
+    .pbi-next { right: 6px; }
+    .pbi-dot { width: 7px; height: 7px; }
 }

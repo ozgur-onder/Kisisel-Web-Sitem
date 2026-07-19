@@ -15,7 +15,7 @@ return [
     'section.reports.subtitle' => '',
     'section.reports.loading' => 'Caricamento del rapporto…',
     'section.reports.placeholder' => 'Questo rapporto è attualmente in fase di costruzione. Sarà aggiunto molto presto.',
-    'section.reports.lang_notice' => 'Nota: L’interfaccia della dashboard interattiva e i dati sono configurati in turco.',
+    'section.reports.lang_notice' => 'Nota: L\'interfaccia della dashboard interattiva e i dati sono configurati in turco.',
     'section.reports.open' => 'Apri in una nuova scheda',
     'section.contact' => 'Contatti',
 
@@ -24,9 +24,9 @@ return [
     'report.tab3.title' => 'Call center',
 
     'hero.tag' => 'Team leader senior • Reportistica & workforce planning',
-    'hero.title_html' => 'Conosci il <span class="highlight">team</span>, monitora le <span class="highlight">metriche</span>, guida l’<span class="highlight">operatività</span>',
-    'hero.subtitle' => 'Rendo le operazioni misurabili e guido i team con i dati. Costruisco sistemi analitici che rafforzano le decisioni e migliorano l’efficienza nel tempo.',
-    'hero.quote_html' => 'Per me, <strong>una decisione senza dati è solo un’ipotesi.</strong>',
+    'hero.title_html' => 'Conosci il <span class="highlight">team</span>, monitora le <span class="highlight">metriche</span>, guida l\'<span class="highlight">operatività</span>',
+    'hero.subtitle' => 'Rendo le operazioni misurabili e guido i team con i dati. Costruisco sistemi analitici che rafforzano le decisioni e migliorano l\'efficienza nel tempo.',
+    'hero.quote_html' => 'Per me, <strong>una decisione senza dati è solo un\'ipotesi.</strong>',
     'hero.cta' => 'Contattami',
 
     'modal.success.title' => 'Messaggio inviato!',
@@ -59,4 +59,9 @@ return [
     'contact.send' => 'Invia messaggio',
     'form.success' => 'Il tuo messaggio è stato inviato con successo. Ti risponderò il prima possibile.',
     'form.error' => 'Non è stato possibile inviare il tuo messaggio. Per favore riprova più tardi.',
+
+    'section.reports.credentials.hint'     => 'Per provare la versione interattiva:',
+    'section.reports.credentials.email_label'    => 'E-mail',
+    'section.reports.credentials.password_label' => 'Password',
+    'section.reports.view_interactive'      => 'Apri il report interattivo',
 ];

@@ -59,4 +59,9 @@ return [
     'contact.send' => 'Nachricht senden',
     'form.success' => 'Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich so bald wie möglich bei Ihnen.',
     'form.error' => 'Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.',
+
+    'section.reports.credentials.hint'     => 'Um die interaktive Version auszuprobieren:',
+    'section.reports.credentials.email_label'    => 'E-Mail',
+    'section.reports.credentials.password_label' => 'Passwort',
+    'section.reports.view_interactive'      => 'Interaktiven Bericht öffnen',
 ];
