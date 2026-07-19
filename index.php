@@ -342,7 +342,7 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" &&
                         -->
                         <li class="nav-item" role="presentation">
                             <button class="powerbi-tab-btn active"
-                                    data-images='["assets/img/reports/hr-1.jpg"]'
+                                    data-images='["assets/img/reports/insankaynaklari/hr-1.jpg","assets/img/reports/insankaynaklari/hr-2.hpg"   ]'
                                     data-report-url="<?php echo htmlspecialchars($pbiHrUrl, ENT_QUOTES, 'UTF-8'); ?>"
                                     data-report-title="<?php echo htmlspecialchars(t('report.tab1.title'), ENT_QUOTES, 'UTF-8'); ?>"
                                     aria-selected="true">

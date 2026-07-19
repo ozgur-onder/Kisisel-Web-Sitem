@@ -7,11 +7,11 @@ return [
     'nav.about' => 'Hakkımda',
     'nav.skills' => 'Yetkinlikler',
     'nav.career' => 'Kariyer',
-    'nav.reports' => 'Mock Data PBI',
+    'nav.reports' => 'Demo Paneli PBI',
     'nav.contact' => 'İletişim',
 
     'section.career' => 'Kariyer Yolculuğum',
-    'section.reports' => 'Mock Data & Power BI',
+    'section.reports' => 'Mock Data Power BI',
     'section.reports.subtitle' => '',
     'section.reports.loading' => 'Rapor yükleniyor…',
     'section.reports.placeholder' => 'Bu rapor şu anda yapım aşamasındadır. Çok yakında eklenecektir.',
@@ -19,7 +19,7 @@ return [
     'section.reports.open' => 'Yeni sekmede aç',
     'section.contact' => 'İletişim',
 
-    'report.tab1.title' => 'İK Analitiği',
+    'report.tab1.title' => 'İnsan Kaynakları Dashboard',
     'report.tab2.title' => 'Satış Analizi',
     'report.tab3.title' => 'Çağrı Merkezi',
 
